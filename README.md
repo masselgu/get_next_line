@@ -2,9 +2,9 @@
 
 > Reading a line from a fd is way too tedious.
 
-[![norminette](https://img.shields.io/badge/norminette-100%25-brightgreen)](https://github.com/42School/norminette)
+[![norminette](https://img.shields.io/badge/norminette-OK-brightgreen)](https://github.com/42School/norminette)
 [![42](https://img.shields.io/badge/42-cursus-blue)](https://42.fr)
-[![BUFFER_SIZE](https://img.shields.io/badge/BUFFER_SIZE-42-blue)](https://github.com/42School/get_next_line)
+[![BUFFER_SIZE](https://img.shields.io/badge/BUFFER_SIZE-n-blue)](https://github.com/42School/get_next_line)
 
 ## 📖 Introduction
 
