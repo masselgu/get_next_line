@@ -34,3 +34,11 @@ This project introduces the concept of **static variables** in C programming, wh
 char *get_next_line(int fd);
 ```
 
+## Allowed External Functions
+
+| Function | Purpose |
+|----------|---------|
+| `read` | Read data from a file descriptor |
+| `malloc` | Dynamic memory allocation |
+| `free` | Memory deallocation |
+
