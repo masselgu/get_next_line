@@ -1,6 +1,5 @@
-# get_next_line - @42cursus
+# get_next_line
 
-> Reading a line from a fd is way too tedious.
 
 [![norminette](https://img.shields.io/badge/norminette-OK-brightgreen)](https://github.com/42School/norminette)
 [![42](https://img.shields.io/badge/42-cursus-blue)](https://42.fr)
