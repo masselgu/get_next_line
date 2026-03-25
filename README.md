@@ -42,3 +42,63 @@ char *get_next_line(int fd);
 | `malloc` | Dynamic memory allocation |
 | `free` | Memory deallocation |
 
+## Static Variables
+
+You must use at least one static variable to preserve data between calls:
+
+```c
+static char *stash;  // Stores leftover data between reads
+```
+
+### Memory Management
+
+    - The function returns the line read (including \n if present)
+
+    - If there's nothing else to read or an error occurs, returns NULL
+
+    - All allocated memory must be properly freed
+
+### Buffer Size
+``` bash
+The compilation must work with the flag -D BUFFER_SIZE=n:
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c main.c
+```
+## 🌟 Bonus Features
+
+### The bonus part has two strict requirements that elevate your implementation:
+1. Single Static Variable
+
+You must develop get_next_line using only one static variable. This forces you to think creatively about data structures.
+2. Multiple File Descriptors
+
+Your function must manage multiple file descriptors simultaneously. You can read from fd 3, then fd 4, then fd 5, and then go back to fd 3—the function will remember exactly where it left off in each file without mixing up the data.
+``` c
+// Example: Reading from multiple FDs alternately
+line1 = get_next_line(fd1);  // Reads line from file 1
+line2 = get_next_line(fd2);  // Reads line from file 2  
+line3 = get_next_line(fd1);  // Continues where it left off in file 1
+```
+### Implementation Strategy
+
+To handle multiple FDs with a single static variable, we use an array (or a linked list) where the index corresponds to the file descriptor:
+``` c
+static char *stash[OPEN_MAX];  // One pointer per possible FD
+```
+
+
+## 📥 Getting Started
+
+### 🔧 Clone the Repository
+
+To get a local copy of the project, run:
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/get_next_line.git
+
+# Navigate to the project directory
+cd get_next_line
+
+# Build the library
+make
+```
