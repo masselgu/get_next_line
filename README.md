@@ -93,7 +93,7 @@ To get a local copy of the project, run:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/get_next_line.git
+git clone https://github.com/masselgu/get_next_line.git
 
 # Navigate to the project directory
 cd get_next_line
